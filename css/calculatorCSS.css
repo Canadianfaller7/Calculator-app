@@ -1,0 +1,118 @@
+/* These are like making the numbers more crunched together and at a smaller
+font size*/
+html {
+    font-size: 70%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* This makes a border around the numbers and positions the calculator
+towards the middle of the screen and makes it wide*/
+.calculator {
+    border: 1.2px solid darkslategray;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+/* This is going to make the screen of the calculator 100%(where the 0 is)
+and make the screen bigger, change background color and the color of 0,
+move 0 to the right of the screen, and move it to the left a little from the 
+corner of the screen*/
+.calculatorScreen {
+    width: 100%;
+    font-size: 8rem;
+    height: 200px;
+    border: none;
+    background-color: black;
+    color: whitesmoke;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+/* This is going to raise the height of the buttons, add a border radius
+around the buttons and border, give them a transparant background and make
+their font bigger, it also adds a linear gradient background image, some text
+shadow, and box shadow*/
+button {
+    height: 70px;
+    border-radius: 3px;
+    border: 1px solid darkslategray;
+    background-color: transparent;
+    font-size: 3.2rem;
+    color: black;
+    background-image: linear-gradient(to bottom, transparant, transparent 50%,
+    rgba(0, 0, 0, .06));
+    text-shadow: inset 0 1px rgba(255, 255, 255, .4);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .05), inset 0 1px 0 0
+    rgba(255, 255, 255, .05), inset 0 -1px 0 0 rgba(255, 255, 255, .05),
+    0 1px 0 0 rgba(255, 255, 255, .05);
+}
+
+/* This kinda gives a grey color over puttons when you hover over them*/
+button:hover {
+    background-color: #e1e1e1;
+}
+
+/* This makes the like add, sub, divide, mult buttons black and also have
+a greyish transparant color to them and then adds a light grey backgroudn color*/
+.operator {
+    color: black;
+    background-image: linear-gradient(to bottom, transparent, transparent 50%,
+    rgba(0,0,0,.05));
+    background-color: lightgray;
+}
+/* This changes the background color of the AC button with a slight grey border
+and also changes the AC to white.*/
+.allClear {
+    background-color: darkturquoise;
+    border-color: darkslategray;
+    color: whitesmoke;
+}
+
+/* Changes background color of AC button when hovered over*/
+.allClear:hover {
+    background-color: rgb(31, 163, 157);
+}
+
+/* This takes the zero button and makes it fit in the 5 area and span over
+2 areas which makes it wider */
+
+
+/* This sets the color and border color and color of the equal button,
+it also makes the height 100% and then sets a grid area where the equal
+button is put in place under the operator values*/
+.equalSign {
+    background-color: deepskyblue;
+    border-color: darkslategrey;
+    color: whitesmoke;
+    height: 70px;
+    grid-area: 5 / span 4;
+    
+}
+
+/* changes background color*/
+.equalSign:hover {
+    background-color: rgb(5, 136, 180);
+}
+
+/* This sets up a grid that spreads out all of the keys and the other buttons
+to size of an actual calculator and then it adds a grid gap which spreads the 
+buttons further from each other and then we add padding which makes them a
+bit further from the edge of the border*/
+.calculatorKeys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
